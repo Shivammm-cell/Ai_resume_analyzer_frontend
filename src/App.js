@@ -24,10 +24,12 @@ function App() {
 
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/api/resume/analyze", {
+      const response = await fetch("https://ai-resume-analyzer-backend-ls0f.onrender.com/api/resume/analyze", {
         method: "POST",
         body: formData
       });
+
+      console.log("Response received from backend");
 
       const data = await response.json();
 
